@@ -16,6 +16,7 @@ class PigLatinize
         front = word_arr.shift
         word_arr << front
         word_arr << "ay"
+        word_arr.join
       end
       end.join
   end
