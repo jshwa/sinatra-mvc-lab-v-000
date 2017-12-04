@@ -18,7 +18,7 @@ class PigLatinizer
       end
 
         punct != nil ? word += punct : word
-        # capital_letter?(word) ? word.capitalize! : word
+        capital_letter?(word) ? word.capitalize! : word
 
     end.join(" ")
   end
