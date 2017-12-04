@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Pig Latinizer</h1>
-
-    <p><%= @text.piglatinize %></p>
+    <% words = PigLatinize.new %>
+    <p><%= words.piglatinize(@text) %></p>
   </body>
 </html>
