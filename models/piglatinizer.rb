@@ -13,12 +13,11 @@ class PigLatinize
         word += "ay"
       else
         word_arr = word.split(/^([^aeiou]+)/).drop(1)
-        front = word_arr.shift
-        word_arr << front
+        word_arr << word_arr.shift
         word_arr << "ay"
         word = word_arr.join
       end
-        capital_letter?(word) ? word.downcase.capitalize! : word 
+        capital_letter?(word) ? word.downcase.capitalize! : word
     end.join(" ")
   end
 
