@@ -9,10 +9,10 @@ class PigLatinize
     arr = text.split(" ")
 
     arr.collect do |word|
-      if word.split("").first == /[aeiou]/
+      if word.start_with?(/[aeiou]/)
         word += "ay"
       else
-        word_arr = word.split(/[aeiou]/)
+        word_arr = word.split(/^([^aeiou]+)/).drop(1)
         front = word_arr.shift
         word_arr << front
         word_arr << "ay"
