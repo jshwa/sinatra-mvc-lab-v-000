@@ -20,7 +20,7 @@ class PigLatinizer
         word += punct if punct != nil
         capital_letter?(word) ? word.capitalize! : word
 
-    end
+    end.join(" ")
   end
 
   def capital_letter?(word)
