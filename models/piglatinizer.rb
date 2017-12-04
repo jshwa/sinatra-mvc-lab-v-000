@@ -9,15 +9,16 @@ class PigLatinize
     arr = text.split(" ")
 
     arr.collect do |word|
-      if word =~ /^[AEIOUaeiou]/
-        word += "ay"
-      else
+      
+      if word !~ /^[AEIOUaeiou]/
         word_arr = word.split(/^([^aeiou]+)/).drop(1)
         word_arr << word_arr.shift
-        word_arr << "ay"
         word = word_arr.join
       end
+      
+        word += "ay"
         capital_letter?(word) ? word.downcase.capitalize! : word
+
     end.join(" ")
   end
 
