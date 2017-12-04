@@ -11,12 +11,12 @@ class PigLatinize
     arr.collect do |word|
       if word.start_with?("a", "e", "i", "o", "u")
         word += "ay"
-      # else
-      #   word_arr = word.split(/^([^aeiou]+)/).drop(1)
-      #   front = word_arr.shift
-      #   word_arr << front
-      #   word_arr << "ay"
-      #   word_arr.join
+      else
+        word_arr = word.split(/^([^aeiou]+)/).drop(1)
+        front = word_arr.shift
+        word_arr << front
+        word_arr << "ay"
+        word_arr.join
       end
       # word.downcase.capitalize! if capital_letter?(word)
     end.join(" ")
