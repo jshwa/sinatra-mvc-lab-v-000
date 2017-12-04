@@ -1,3 +1,5 @@
+require 'pry'
+
 class PigLatinizer
 
   def piglatinize(text)
@@ -8,6 +10,7 @@ class PigLatinizer
 
       if word =~ /^[AEIOUaeiou]/
         word += "way"
+        binding.pry
       else
         word_arr = word.split(/^([^aeiou]+)/).drop(1)
         word_arr << word_arr.shift
