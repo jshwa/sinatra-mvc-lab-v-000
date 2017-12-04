@@ -9,7 +9,7 @@ class PigLatinize
     arr = text.split(" ")
 
     arr.collect do |word|
-      punctuation?(word) ? punct = word.slice!(/\W/) : punct = nil
+      # punctuation?(word) ? punct = word.slice!(/\W/) : punct = nil
 
       if word !~ /^[AEIOUaeiou]/
         word_arr = word.split(/^([^aeiou]+)/).drop(1)
