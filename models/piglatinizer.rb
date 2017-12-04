@@ -18,6 +18,6 @@ class PigLatinize
         word_arr << "ay"
         word_arr.join
       end
-      end.join
+    end.join(" ")
   end
 end
