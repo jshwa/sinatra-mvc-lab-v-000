@@ -29,6 +29,6 @@ class PigLatinize
   end
 
   def punctuation?(word)
-    word.ends_with?(".", "," ":", ";", "!", "?") ? true : false
+    word.end_with?(".", "," ":", ";", "!", "?") ? true : false
   end
 end
