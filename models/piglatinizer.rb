@@ -31,4 +31,8 @@ class PigLatinizer
   def punctuation?(word)
     word.end_with?(".", "," ":", ";", "!", "?") ? true : false
   end
+
+  def to_pig_latin(text)
+    piglatinize(text)
+  end
 end
