@@ -22,6 +22,7 @@ class PigLatinizer
         capital_letter?(word) ? word.capitalize! : word
 
     end
+    binding.pry
   end
 
   def capital_letter?(word)
