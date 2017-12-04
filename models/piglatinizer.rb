@@ -18,7 +18,7 @@ class PigLatinize
         word_arr << "ay"
         word_arr.join
       end
-      word.downcase.capitalize! 
+      word.capital_letter? ? word.downcase.capitalize! : word
     end.join(" ")
   end
 
